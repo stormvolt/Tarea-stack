@@ -21,6 +21,9 @@ class Stack
  
 		void push(T);
 		T pop();
+		T top();
+		void concat(Stack);
+
 	
 		 
 
