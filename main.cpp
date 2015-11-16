@@ -5,7 +5,7 @@
  
 using namespace std;
 
-//template<class T> class Stack;
+
 
 int main()
 {
