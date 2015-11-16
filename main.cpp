@@ -12,28 +12,43 @@ int main()
 	Stack<int> iStack;
 	cout << "Añadimos a la pila el valor 20." << "\n" ;
 	iStack.push(20);
+	cout<< "Función top: " << iStack.top() << "\n";
 	cout << "Añadimos a la pila el valor 10." << "\n";
 	iStack.push(10);
-	cout << "Funcion pop: ";
+	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
 	cout << "Añadimos a la pila el valor 40."<< "\n";
 	iStack.push(40);
+	cout<< "Función top: " << iStack.top() << "\n";
 	cout << "Añadimos a la pila el valor 30."<< "\n";
 	iStack.push(30);
+	
+	Stack<int> iStackB;
+	iStackB.push(2);
+	iStackB.push(4);
+	iStackB.push(6);
+	iStackB.push(8);
 
-	cout << "Funcion pop: ";
+	cout << "Stack C = Stack A + Stack B: " << "\n";
+	Stack<int> iStackC = iStack + iStackB;
+	
+
+
+	
+	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
-	cout << "Funcion pop: ";
+	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
 	cout << "Añadimos a la pila el valor 90."<< "\n";
 	iStack.push(90);
-	cout << "Funcion pop: ";
+	cout<< "Función top: " << iStack.top() << "\n";
+	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
-	cout << "Funcion pop: ";
+	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
 
