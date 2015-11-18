@@ -69,6 +69,75 @@ void Stack<T>::concat(Stack stack)
 	}
 }
 
+// Buscar el dato de un nodo
+template<typename T>
+int Stack<T>::search(T data_)
+{
+	Node<T> *temp = last;
+	int cont = 1;
+	int cont2 = 0;
+	while (temp)
+	{
+		if (temp->data == data_)
+		{
+			return cont;			
+			cont2++;
+		}
+		temp = temp->next;
+		cont++;
+	}
+	if (cont2 == 0)
+	{
+		return 0;
+	}
+	
+}
+
+
+// Elimina una intersección por posición del nodo
+template<typename T>
+void Stack<T>::delInterPos(int pos, Stack<T>stack2)
+{
+	Node<T> *temp = last;
+	Node<T> *temp1 = temp->next;
+	if (pos == 1)
+	{
+		last = temp->next;
+	}
+	else
+	{
+		for (int i = 2; i <= pos; i++)
+		{
+			if (i == pos)
+			{
+				Node<T> *aux_node = temp1;
+				temp->next = temp1->next;
+				if(stack2.search(aux_node->data)!=0)
+				{
+					delete aux_node;
+				}
+			}
+			temp = temp->next;
+			temp1 = temp1->next;
+		}
+	}
+}
+
+// Elimir números que coinciden en 2 Stacks
+template<typename T>
+void Stack<T>::nointersection(Stack<T> Stack_2)
+{
+	int k=1;
+	Node<T> *temp = last;
+	while(temp)
+	{
+		delInterPos(k, Stack_2);
+		k++;
+	}
+			
+}
+
+
 
 // Sobrecarga del operador +
 template<class T>
