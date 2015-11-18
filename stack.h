@@ -23,6 +23,9 @@ class Stack
 		T pop();
 		T top();
 		void concat(Stack);
+		int search(T);
+		void delInterPos(int, Stack);
+		void nointersection(Stack);
 
 	
 		 
