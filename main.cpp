@@ -24,18 +24,6 @@ int main()
 	cout << "Añadimos a la pila el valor 30."<< "\n";
 	iStack.push(30);
 	
-	Stack<int> iStackB;
-	iStackB.push(2);
-	iStackB.push(4);
-	iStackB.push(6);
-	iStackB.push(8);
-
-	cout << "Stack C = Stack A + Stack B: " << "\n";
-	Stack<int> iStackC = iStack + iStackB;
-	
-
-
-	
 	cout << "Función pop: ";
 	cout << iStack.pop() ;
 	cout <<  "\n";
@@ -52,5 +40,18 @@ int main()
 	cout << iStack.pop() ;
 	cout <<  "\n";
 
+
+	Stack<int> iStackB;
+	iStackB.push(2);
+	iStackB.push(4);
+	iStackB.push(6);
+	iStackB.push(8);
+
+	cout << "Stack C = Stack A + Stack B: " << "\n";
+	Stack<int> iStackC = iStack + iStackB;
+	cout << "Top del Stack C: "<< iStackC.top()<< "\n";
+	cout << "Stack C - Stack B : " << "\n";
+	Stack<int>iStackD = iStackC - iStackB;
+	cout << "Top del Stack C: "<< iStackD.top()<< "\n";
 	return 1;
 }
